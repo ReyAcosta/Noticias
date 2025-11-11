@@ -30,7 +30,7 @@ class Note(models.Model):
     autor = models.ForeignKey(User, on_delete=models.CASCADE)
     labels = models.ManyToManyField(Label, blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
-    updated_at = models.DateTimeField(auto_now=True)
+    updated_at = models.DateTimeField(auto_now=False)
     visible = models.BooleanField(default=False)
 
     def __str__(self):
