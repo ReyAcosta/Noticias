@@ -31,7 +31,7 @@ class Note(models.Model):
     labels = models.ManyToManyField(Label, blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=False)
-    visible = models.BooleanField(default=False)
+    visible = models.BooleanField(default=True)
 
     def __str__(self):
         return self.title
